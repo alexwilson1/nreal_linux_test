@@ -1,0 +1,27 @@
+{
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.black-formatter"
+      ]
+    }
+  },
+  "runArgs": [
+    "--privileged",
+    "--env",
+    "DISPLAY=${env:DISPLAY}",
+    "--volume",
+    "/tmp/.X11-unix:/tmp/.X11-unix:rw"
+  ]
+}
+// needs xhost +SI:localuser:root on the host for now
+// find empty displays using 'xrandr' and look for 'disconnected' (e.g. DVI-I-5-4)
+// xrandr --addmode DVI-I-5-4 1920x1080
+// xrandr --output DVI-I-5-4 --mode 1920x1080 --left-of eDP-1
