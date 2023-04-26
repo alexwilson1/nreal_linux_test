@@ -2,7 +2,7 @@
 
 This project is a Proof of Concept (POC) for creating a framework that enables multiple virtual displays in Augmented Reality (AR) space on Nreal Air. It is a very early alpha version, but unfortunately, I won't have time to work on it for the foreseeable future. The project builds off the great work of Tobias Frisch to make USB drivers available in the following repository: https://gitlab.com/TheJackiMonster/nrealAirLinuxDriver.
 
-The project works on Ubuntu 22.04.2 LTS with X11 and Gnome 42.5. It might be possible to adapt GStreamer for Wayland in the future.  The framework currently works best for putting existing real displays in AR space. However, I have had some success using xrandr to create virtual displays and use them too.
+The project was developed on Ubuntu 22.04.2 LTS with X11 and Gnome 42.5. It might be possible to adapt GStreamer for Wayland in the future.  The framework currently works best for putting existing real displays in AR space. However, I have had some success using xrandr to create virtual displays and use them too.
 
 ## Instructions
 1. Clone this repository 
@@ -26,7 +26,7 @@ To create virtual displays (glitchy for me), follow these instructions:
 - The Nreal display needs to be disabled from interaction with the window manager as we just want to use it to display a mirror of all the other screens. I haven't found a way to do this yet.
 - Only yaw has been implemented (not pitch or roll)
 
-## Requirements
+## Developed on
 - Ubuntu 22.04.2 LTS with X11 and Gnome 42.5
 - Nreal Air
 - DP Alt Mode capable laptop/PC
