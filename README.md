@@ -5,11 +5,11 @@ This project is a Proof of Concept (POC) for creating a framework that enables m
 The project was developed on Ubuntu 22.04.2 LTS with X11 and Gnome 42.5. It might be possible to adapt GStreamer for Wayland in the future.  The framework currently works best for putting existing real displays in AR space. However, I have had some success using xrandr to create virtual displays and use them too.
 
 ## Instructions
-1. Clone this repository 
+1. Clone this repository: `git clone https://github.com/alexwilson1/nreal_linux_test`
 2. Ensure that the NReal is the rightmost display in system settings
 3. Run `xhost +SI:localuser:root` on the host to give access to X11 (docker container runs as root due to USB driver requirement) (revert this change when you are done for security reasons)
-4. Run the devcontainer
-5. Run main.py
+4. Run the devcontainer: `cd .devcontainer &&  docker build -t my-image . && docker run -it my-image`
+5. Run `main.py` (you might need to edit the path to `nrealAirLinuxDriver`)
 6. Calibrate left and right by following the instructions 
 7. The output should be displayed on the Nreal glasses.
 
